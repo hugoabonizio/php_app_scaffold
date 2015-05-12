@@ -1,7 +1,8 @@
 <?php
 namespace Framework;
+include_once 'application.php';
 
-class Application {
+class Initializer extends Application {
 	function __construct() {
 		$this->loadFramework();
 		$this->loadControllers();
@@ -35,6 +36,6 @@ class Application {
 	}
 	
 	function run() {
-		
+		parent::run();
 	}
 }
