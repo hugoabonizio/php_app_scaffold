@@ -22,7 +22,7 @@ class Router {
 	
 	static function route($method, $uri) {
 		if (array_key_exists($uri, self::$_routes)) {
-			return self::$_routes[$uri][$method];
+			return self::$_routes[$uri][strtoupper($method)];
 		} else {
 			return 404;
 		}
