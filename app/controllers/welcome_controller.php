@@ -5,6 +5,6 @@ class WelcomeController extends ApplicationController {
 	}
 	
 	function test() {
-		
+		$this->hello = 'world';
 	}
 }

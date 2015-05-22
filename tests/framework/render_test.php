@@ -9,10 +9,12 @@ class TestingController {
 ));
 
 class RenderTest extends \PHPUnit_Framework_TestCase {
+	function setUp() {
+		$this->app = new \Framework\Application;
+	}
 	function testRenderText() {
-		$app = new \Framework\Application;
 		ob_start();
-		$app->route('GET', '/test1');
+		$this->app->route('GET', '/test1');
 		$rendered = ob_get_clean();
 		$this->assertEquals('OK!', $rendered);
 	}

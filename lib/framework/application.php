@@ -18,7 +18,7 @@ class Application {
 				$result = $instance->$action();
 				if ($result === null) {
 					// render template
-					echo Renderer::render_view($instance);
+					echo Renderer::render_view($instance, $parts[0], $action);
 				} else {
 					// render what returned
 					echo $result;
