@@ -36,6 +36,6 @@ class Initializer extends Application {
 	}
 	
 	function run() {
-		parent::run();
+		parent::route($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
 	}
 }

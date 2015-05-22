@@ -16,7 +16,7 @@ class Router {
 // 			} elseif (is_callable($to)) {
 // 				// bind direct a lambda function
 // 			}
-			self::$_routes[strtoupper($route[1])][$route[0]] = $route[2];
+			self::$_routes[$route[1]][strtoupper($route[0])] = $route[2];
 		}
 	}
 	

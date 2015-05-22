@@ -1,4 +1,4 @@
 <?php
-class ApplicationController extends ControllerBase {
+class ApplicationController extends \Framework\ControllerBase {
 
 }
