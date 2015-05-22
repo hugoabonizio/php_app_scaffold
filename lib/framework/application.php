@@ -15,7 +15,14 @@ class Application {
 				$action = $parts[1];
 				// create a new controller instance
 				$instance = new $controller();
-				echo $instance->$action();
+				$result = $instance->$action();
+				if ($result === null) {
+					// render template
+					echo Renderer::render_view($instance);
+				} else {
+					// render what returned
+					echo $result;
+				}
 			}
 		}
 	}
