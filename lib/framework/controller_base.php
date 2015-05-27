@@ -11,7 +11,10 @@ class ControllerBase {
 	// callbacks
 	function before_action() {
 	}
-	
 	function after_action() {
+	}
+	
+	function redirect($to) {
+		header('Location: ' . $to);
 	}
 }
