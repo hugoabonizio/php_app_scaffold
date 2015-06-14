@@ -2,6 +2,8 @@
 namespace Framework;
 include_once 'application.php';
 
+session_start();
+
 class Initializer extends Application {
 	function __construct() {
 		$this->loadFramework();

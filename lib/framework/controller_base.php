@@ -17,4 +17,12 @@ class ControllerBase {
 	function redirect($to) {
 		header('Location: ' . $to);
 	}
+	
+	function session($name = '') {
+		if (emmpty($name)) {
+			return $_SESSION;
+		} else {
+			return $_SESSION[$name];
+		}
+	}
 }
