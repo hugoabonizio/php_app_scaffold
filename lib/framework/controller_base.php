@@ -19,7 +19,7 @@ class ControllerBase {
 	}
 	
 	function session($name = '') {
-		if (emmpty($name)) {
+		if (empty($name)) {
 			return $_SESSION;
 		} else {
 			return $_SESSION[$name];
